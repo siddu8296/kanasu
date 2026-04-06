@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanasu Constructions | We Build Your Dreams</title>
+  <meta name="description" content="Kanasu Constructions delivers premium residential, commercial, renovation, and structural engineering solutions in Karnataka." />
+  <style>
+    :root {
+      --navy: #081a33;
+      --blue: #0f4c81;
+      --sky: #1f7acb;
+      --gold: #d5a648;
+      --light: #f5f8fc;
+      --white: #ffffff;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --card: rgba(255,255,255,0.10);
+      --border: rgba(255,255,255,0.18);
+      --shadow: 0 20px 50px rgba(3, 18, 39, 0.18);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef4fb 0%, #ffffff 42%, #f6f9fd 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(8, 26, 51, 0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.4px;
+    }
+
+    .brand small {
+      display: block;
+      color: #b8c8df;
+      font-size: 0.72rem;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .menu a {
+      color: #e9f2ff;
+      font-size: 0.95rem;
+      opacity: 0.92;
+    }
+
+    .menu a:hover { color: #fff; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #f0c36d);
+      color: #11233b;
+      box-shadow: 0 10px 25px rgba(213,166,72,0.35);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); }
+
+    .btn-outline {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,0.12); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(31,122,203,0.30), transparent 28%),
+        radial-gradient(circle at 85% 12%, rgba(213,166,72,0.22), transparent 22%),
+        linear-gradient(135deg, #061428 0%, #0a2041 40%, #0f4c81 100%);
+      color: var(--white);
+      padding: 72px 0 88px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #d7e8ff;
+      font-size: 0.82rem;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4.7rem);
+      line-height: 1.04;
+      margin: 0 0 16px;
+      letter-spacing: -1.4px;
+    }
+
+    .hero p {
+      color: #dbe7f7;
+      font-size: 1.08rem;
+      line-height: 1.8;
+      max-width: 640px;
+      margin: 0 0 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .mini-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .mini-card {
+      min-width: 150px;
+      padding: 16px 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .mini-card strong {
+      display: block;
+      font-size: 1.25rem;
+      margin-bottom: 4px;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 500px;
+    }
+
+    .glass-panel {
+      position: absolute;
+      inset: 18px 0 0 44px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.05));
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: var(--shadow);
+    }
+
+    .city {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      gap: 18px;
+      padding: 58px 24px 32px;
+    }
+
+    .tower {
+      width: 80px;
+      background: linear-gradient(180deg, #8fd0ff 0%, #1a66aa 45%, #0a2142 100%);
+      border-radius: 14px 14px 0 0;
+      position: relative;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+      transform: translateY(0);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .tower:nth-child(2) { height: 320px; animation-delay: .4s; }
+    .tower:nth-child(1) { height: 230px; animation-delay: .2s; }
+    .tower:nth-child(3) { height: 260px; animation-delay: .8s; }
+    .tower:nth-child(4) { height: 190px; animation-delay: 1.1s; }
+    .tower:nth-child(5) { height: 150px; animation-delay: .5s; }
+
+    .tower::before {
+      content: "";
+      position: absolute;
+      inset: 18px 14px;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.85) 0 8px,
+        transparent 8px 18px
+      );
+      opacity: 0.65;
+      border-radius: 7px;
+    }
+
+    .floating-badge {
+      position: absolute;
+      padding: 16px 18px;
+      background: rgba(255,255,255,0.92);
+      color: var(--navy);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      width: 220px;
+    }
+
+    .badge-1 { top: 26px; left: 0; }
+    .badge-2 { right: 0; bottom: 52px; }
+
+    .floating-badge span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-top: 5px;
+    }
+
+    section { padding: 82px 0; }
+
+    .section-head {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      text-align: center;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      margin: 0 0 12px;
+      color: #10233c;
+    }
+
+    .section-head p {
+      margin: 0;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .about-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .card h3 { margin-top: 0; color: #10233c; }
+
+    .bullet-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .bullet {
+      display: flex;
+      gap: 14px;
+      align-items: start;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #f5f9ff;
+    }
+
+    .bullet b {
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--sky));
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      border: 1px solid #e7eef8;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(3,18,39,0.16);
+    }
+
+    .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, rgba(15,76,129,0.10), rgba(213,166,72,0.18));
+    }
+
+    .service-card p,
+    .feature-card p,
+    .project-card p,
+    .timeline-step p,
+    .testimonial p,
+    .contact-card p,
+    .footer p,
+    .footer li,
+    .about-grid p,
+    .form-note,
+    .muted {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .feature-card strong {
+      display: block;
+      font-size: 2rem;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .projects-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .filter-btn {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid #d7e3f3;
+      background: #fff;
+      font-weight: 700;
+      color: #274766;
+      cursor: pointer;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: linear-gradient(135deg, var(--blue), var(--sky));
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      overflow: hidden;
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      border: 1px solid #e8eef7;
+    }
+
+    .project-image {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .project-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.42));
+    }
+
+    .project-tag {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 1;
+      background: rgba(255,255,255,0.92);
+      color: #173153;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+    }
+
+    .project-body { padding: 20px; }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+    }
+
+    .timeline-step {
+      background: #fff;
+      border-radius: 20px;
+      padding: 22px 18px;
+      box-shadow: var(--shadow);
+      position: relative;
+      text-align: center;
+    }
+
+    .step-no {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--gold), #efcc83);
+      color: #12243c;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .testimonial {
+      background: #fff;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .stars { color: #f1b94d; font-size: 1.05rem; letter-spacing: 3px; }
+    .person { margin-top: 18px; font-weight: 800; color: #10233c; }
+    .role { color: var(--muted); font-size: 0.9rem; }
+
+    .contact-card,
+    .form-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .contact-item {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #f7faff;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid #d8e3f1;
+      font: inherit;
+      outline: none;
+      background: #fbfdff;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--sky);
+      box-shadow: 0 0 0 4px rgba(31,122,203,0.10);
+    }
+
+    textarea { min-height: 130px; resize: vertical; }
+
+    .footer {
+      background: linear-gradient(135deg, #07162d, #0f2f56);
+      color: #eef6ff;
+      padding: 62px 0 36px;
+      margin-top: 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 22px;
+      margin-bottom: 24px;
+    }
+
+    .footer h4 { margin-top: 0; margin-bottom: 12px; }
+    .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .footer .brand { font-size: 1.4rem; }
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,0.10);
+      padding-top: 18px;
+      color: #c8d8ee;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .footer-grid,
+      .services,
+      .projects,
+      .features,
+      .timeline,
+      .testimonials {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 430px; }
+    }
+
+    @media (max-width: 720px) {
+      .menu { display: none; }
+      .services,
+      .projects,
+      .features,
+      .timeline,
+      .testimonials,
+      .about-grid,
+      .contact-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 48px;
+        padding-bottom: 68px;
+      }
+
+      .hero-visual {
+        min-height: 360px;
+      }
+
+      .tower { width: 56px; }
+      .badge-1, .badge-2 { width: 180px; font-size: 0.9rem; }
+      .section-head { margin-bottom: 22px; }
+      .card, .service-card, .feature-card, .testimonial, .contact-card, .form-card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        Kanasu Constructions
+        <small>We Build Your Dreams</small>
+      </div>
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="#contact">Get Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Premium Construction & Structural Solutions</div>
+        <h1>Kanasu Constructions</h1>
+        <p>
+          We deliver premium residential, commercial, renovation, and structural engineering solutions with a focus on quality, durability, safety, and timely delivery across Karnataka.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get Quote</a>
+          <a href="#services" class="btn btn-outline">Our Services</a>
+        </div>
+        <div class="mini-stats">
+          <div class="mini-card"><strong>Quality First</strong><span>Strong engineering standards</span></div>
+          <div class="mini-card"><strong>On-Time</strong><span>Reliable project execution</span></div>
+          <div class="mini-card"><strong>Trusted</strong><span>Client-focused delivery</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="glass-panel"></div>
+        <div class="floating-badge badge-1">
+          <strong>Residential & Commercial</strong>
+          <span>Premium planning, execution, and finish quality.</span>
+        </div>
+        <div class="floating-badge badge-2">
+          <strong>Structural Confidence</strong>
+          <span>Safe, durable, and efficient design-driven construction.</span>
+        </div>
+        <div class="city">
+          <div class="tower"></div>
+          <div class="tower"></div>
+          <div class="tower"></div>
+          <div class="tower"></div>
+          <div class="tower"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Built on Trust, Quality, and Strong Engineering</h2>
+        <p>
+          Kanasu Constructions is a modern construction and structural solutions company committed to delivering strong, elegant, and practical spaces for clients who value quality and confidence.
+        </p>
+      </div>
+      <div class="about-grid">
+        <div class="card reveal">
+          <h3>About Us</h3>
+          <p>
+            We specialise in residential construction, commercial projects, structural design, renovation, and engineering consultation. Every project is approached with careful planning, clear communication, and disciplined execution.
+          </p>
+          <p>
+            Led with a structural engineering mindset, our work balances strength, cost-effectiveness, aesthetics, and long-term durability.
+          </p>
+          <div class="bullet-list">
+            <div class="bullet"><b>1</b><div><strong>Quality Workmanship</strong><br><span class="muted">Premium standards from foundation to finishing.</span></div></div>
+            <div class="bullet"><b>2</b><div><strong>Structural Focus</strong><br><span class="muted">Engineering-led decisions for safer and stronger buildings.</span></div></div>
+            <div class="bullet"><b>3</b><div><strong>Client Satisfaction</strong><br><span class="muted">Transparent work process and dependable support.</span></div></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <h3>Why Clients Choose Kanasu</h3>
+          <p>
+            Our approach combines practical execution with premium presentation. We focus on creating spaces that are functional, durable, and professionally delivered.
+          </p>
+          <div class="project-image" style="height:320px;border-radius:22px;background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80');"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="background: linear-gradient(180deg,#f7fbff, #eef5fb);">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Our Core Services</h2>
+        <p>
+          Complete construction and structural services for clients looking for quality, professionalism, and efficient execution.
+        </p>
+      </div>
+      <div class="services">
+        <div class="service-card reveal">
+          <div class="icon">🏠</div>
+          <h3>Residential Construction</h3>
+          <p>High-quality homes designed and executed for strength, comfort, and modern living.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="icon">🏢</div>
+          <h3>Commercial Construction</h3>
+          <p>Professional spaces with practical planning, strong structural performance, and premium finish.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="icon">📐</div>
+          <h3>Structural Design</h3>
+          <p>Reliable structural planning and engineering consultation for safe and durable buildings.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="icon">🛠️</div>
+          <h3>Renovation & Remodeling</h3>
+          <p>Upgrade existing spaces with better planning, improved function, and refined appearance.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="icon">📋</div>
+          <h3>Project Management</h3>
+          <p>Clear coordination, scheduling, supervision, and quality tracking from start to handover.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="icon">👷</div>
+          <h3>Engineering Consultation</h3>
+          <p>Professional guidance for technical decisions, material choices, planning, and execution strategy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Why Choose Us</h2>
+        <p>We focus on reliable execution, premium quality, and professional communication throughout the project lifecycle.</p>
+      </div>
+      <div class="features">
+        <div class="feature-card reveal"><strong>100%</strong><p>Commitment to quality workmanship and structural confidence.</p></div>
+        <div class="feature-card reveal"><strong>On-Time</strong><p>Planned timelines with disciplined execution and follow-up.</p></div>
+        <div class="feature-card reveal"><strong>Clear</strong><p>Transparent communication from consultation to handover.</p></div>
+        <div class="feature-card reveal"><strong>Value</strong><p>Cost-effective solutions without compromising quality.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="background: linear-gradient(180deg,#f6f9fd,#ffffff);">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Featured Projects</h2>
+        <p>Sample portfolio layout for presenting your future residential, commercial, renovation, and structural work.</p>
+      </div>
+      <div class="projects-toolbar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="homes">Homes</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="structural">Structural</button>
+        <button class="filter-btn" data-filter="renovation">Renovation</button>
+      </div>
+      <div class="projects" id="projectGrid">
+        <article class="project-card reveal" data-category="homes">
+          <div class="project-image" style="background-image:url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80');">
+            <div class="project-tag">Homes</div>
+          </div>
+          <div class="project-body">
+            <h3>Luxury Residence Concept</h3>
+            <p>Elegant residential planning with modern façade, strength, and functionality.</p>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="commercial">
+          <div class="project-image" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80');">
+            <div class="project-tag">Commercial</div>
+          </div>
+          <div class="project-body">
+            <h3>Corporate Office Building</h3>
+            <p>Professional commercial execution with strong planning and premium presentation.</p>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="structural">
+          <div class="project-image" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80');">
+            <div class="project-tag">Structural</div>
+          </div>
+          <div class="project-body">
+            <h3>Structural Planning & Framing</h3>
+            <p>Engineering-led design approach focused on safety, durability, and efficiency.</p>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="renovation">
+          <div class="project-image" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80');">
+            <div class="project-tag">Renovation</div>
+          </div>
+          <div class="project-body">
+            <h3>Modern Renovation Upgrade</h3>
+            <p>Transforming existing spaces into stronger, cleaner, and more elegant environments.</p>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="homes">
+          <div class="project-image" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80');">
+            <div class="project-tag">Homes</div>
+          </div>
+          <div class="project-body">
+            <h3>Premium Villa Exterior</h3>
+            <p>Modern architectural style paired with quality construction and finish control.</p>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="commercial">
+          <div class="project-image" style="background-image:url('https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1200&q=80');">
+            <div class="project-tag">Commercial</div>
+          </div>
+          <div class="project-body">
+            <h3>Retail & Mixed-Use Space</h3>
+            <p>Practical layout planning for business visibility, usability, and long-term value.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Our Work Process</h2>
+        <p>A structured process helps us maintain quality, efficiency, and clarity at every stage.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step reveal"><div class="step-no">1</div><h3>Consultation</h3><p>Understanding needs, goals, site conditions, and priorities.</p></div>
+        <div class="timeline-step reveal"><div class="step-no">2</div><h3>Planning</h3><p>Scope definition, budgeting, scheduling, and execution approach.</p></div>
+        <div class="timeline-step reveal"><div class="step-no">3</div><h3>Design</h3><p>Architectural and structural coordination for better results.</p></div>
+        <div class="timeline-step reveal"><div class="step-no">4</div><h3>Construction</h3><p>Controlled execution with quality and safety supervision.</p></div>
+        <div class="timeline-step reveal"><div class="step-no">5</div><h3>Quality Check</h3><p>Inspection and refinement before final delivery.</p></div>
+        <div class="timeline-step reveal"><div class="step-no">6</div><h3>Handover</h3><p>Clean completion, client review, and project closure.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(180deg,#f7fbff,#eef5fb);">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>What Clients Value</h2>
+        <p>Professionalism, engineering awareness, clean execution, and reliable communication make a difference.</p>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>“Professional approach and clear communication throughout the work. The planning was strong and the execution felt reliable.”</p>
+          <div class="person">Ravi K.</div>
+          <div class="role">Residential Client</div>
+        </div>
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>“The team focused on quality and structure, not just appearance. That gave us more confidence in the project.”</p>
+          <div class="person">Sanjana M.</div>
+          <div class="role">Commercial Client</div>
+        </div>
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>“Excellent support for design and construction decisions. The process felt organised, practical, and client-friendly.”</p>
+          <div class="person">Harish P.</div>
+          <div class="role">Renovation Client</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Let’s Build Something Strong Together</h2>
+        <p>Reach out for residential, commercial, structural, and renovation enquiries.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>Contact Information</h3>
+          <p>We are ready to discuss your project requirements, budget expectations, and planning approach.</p>
+          <div class="contact-list">
+            <div class="contact-item"><strong>Email</strong><br>info@kanasuconstructions.com</div>
+            <div class="contact-item"><strong>Phone</strong><br>+91 8296267181</div>
+            <div class="contact-item"><strong>Service Locations</strong><br>Bangalore • Mysore • Davanagere • Chitradurga</div>
+            <div class="contact-item"><strong>Services</strong><br>Residential • Commercial • Structural • Renovation</div>
+          </div>
+            <div class="contact-item"><strong>Location</strong><br>Karnataka, India</div>
+            <div class="contact-item"><strong>Services</strong><br>Residential • Commercial • Structural • Renovation</div>
+          </div>
+          <div style="margin-top:18px;">
+            <a href="mailto:info@kanasuconstructions.com" class="btn btn-primary">Email Us</a>
+          </div>
+        </div>
+        <div class="form-card reveal">
+          <h3>Request a Quote</h3>
+          <form action="mailto:info@kanasuconstructions.com" method="post" enctype="text/plain">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="tel" name="Phone" placeholder="Phone Number" required>
+            <input type="email" name="Email" placeholder="Email Address" required>
+            <textarea name="Message" placeholder="Tell us about your project"></textarea>
+            <button class="btn btn-primary" type="submit">Send Enquiry</button>
+          </form>
+          <p class="form-note">For better results later, you can connect this form to Google Forms or Formspree.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">Kanasu Constructions</div>
+          <p>Premium residential, commercial, renovation, and structural engineering solutions with quality, trust, and strong execution.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li>Residential Construction</li>
+            <li>Commercial Construction</li>
+            <li>Structural Design</li>
+            <li>Renovation & Remodeling</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>info@kanasuconstructions.com</li>
+            <li>+91 8296267181</li>
+            <li>Bangalore • Mysore • Davanagere • Chitradurga</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>© 2026 Kanasu Constructions. All rights reserved.</span>
+        <span>Designed for a premium business presence.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
